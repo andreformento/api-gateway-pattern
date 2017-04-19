@@ -3,11 +3,11 @@ Implementing API Gateway pattern with Netflix Zuul and Spring Cloud
 
 Based on http://kubecloud.io/apigatewaypattern/
 
-### Another reference
+### Anothers references
 * https://github.com/Netflix/zuul/wiki/How-it-Works
 * https://spring.io/guides/gs/routing-and-filtering/
 
-### How to use
+## How to use
 Gradle is required.
 
 Run with `gradle bootRun --parallel`
