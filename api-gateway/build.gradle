@@ -1,13 +1,13 @@
 buildscript {
-	ext {
-		springBootVersion = '1.5.2.RELEASE'
-	}
-	repositories {
-		mavenCentral()
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-	}
+    ext {
+        springBootVersion = '1.5.2.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
 }
 
 apply plugin: 'java'
@@ -18,18 +18,21 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 
 dependencies {
-	compile('org.springframework.cloud:spring-cloud-starter-zuul')
-	compile('org.springframework.boot:spring-boot-starter-web')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+    compile('org.springframework.cloud:spring-cloud-starter-zuul')
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile group: 'com.squareup.okhttp3', name: 'okhttp', version: '3.7.0'
+
+
+    testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
 dependencyManagement {
-	imports {
-		mavenBom "org.springframework.cloud:spring-cloud-dependencies:Dalston.RELEASE"
-	}
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:Dalston.RELEASE"
+    }
 }

@@ -2,9 +2,9 @@ zuul.routes:
   book:
     path: /movies/**
     url: http://localhost:9000
-  cine:
+  other:
     path: /**
-    url: http://localhost:9000
+#    url: http://localhost:9000
 
 ribbon.eureka.enabled: false
 
