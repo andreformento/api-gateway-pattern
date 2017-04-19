@@ -1,0 +1,9 @@
+zuul.routes.book:
+  path: /movies/**
+  url: http://localhost:9000
+
+ribbon.eureka.enabled: false
+
+server.port: 8080
+
+logging.level.org.springframework.web: INFO
