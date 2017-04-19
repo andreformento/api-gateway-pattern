@@ -6,11 +6,12 @@ Based on http://kubecloud.io/apigatewaypattern/
 ### Anothers references
 * https://github.com/Netflix/zuul/wiki/How-it-Works
 * https://spring.io/guides/gs/routing-and-filtering/
+* https://github.com/ExampleDriven/spring-cloud-zuul-example
 
 ## How to use
 Gradle is required.
 
-Run with `gradle bootRun --parallel`
+Run with `gradle bootRun`
 
 Call:
 

@@ -7,8 +7,8 @@ import org.slf4j.LoggerFactory;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class PreFilter extends ZuulFilter {
-    private static Logger log = LoggerFactory.getLogger(PreFilter.class);
+public class LogPreFilter extends ZuulFilter {
+    private static final Logger LOG = LoggerFactory.getLogger(LogPreFilter.class);
 
     @Override
     public String filterType() {
@@ -30,7 +30,7 @@ public class PreFilter extends ZuulFilter {
         final RequestContext ctx = RequestContext.getCurrentContext();
         final HttpServletRequest request = ctx.getRequest();
 
-        log.info(String.format("%s request to %s", request.getMethod(), request.getRequestURL().toString()));
+        LOG.info(String.format("%s request to %s", request.getMethod(), request.getRequestURL().toString()));
         return null;
     }
 

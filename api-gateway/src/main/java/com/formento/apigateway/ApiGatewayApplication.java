@@ -1,6 +1,7 @@
 package com.formento.apigateway;
 
-import com.formento.apigateway.filter.PreFilter;
+import com.formento.apigateway.filter.LogPreFilter;
+import com.formento.apigateway.filter.RedirectPreFilter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
@@ -15,8 +16,13 @@ public class ApiGatewayApplication {
     }
 
     @Bean
-    public PreFilter preFilter() {
-        return new PreFilter();
+    public LogPreFilter logPreFilter() {
+        return new LogPreFilter();
+    }
+
+    @Bean
+    public RedirectPreFilter redirectPreFilter() {
+        return new RedirectPreFilter();
     }
 
 }

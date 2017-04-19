@@ -3,7 +3,7 @@ zuul.routes:
     path: /movies/**
     url: http://localhost:9000
   cine:
-    path: /**
+    path: /cine/**
     url: http://localhost:9000
 
 ribbon.eureka.enabled: false
